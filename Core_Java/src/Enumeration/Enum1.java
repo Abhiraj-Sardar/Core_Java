@@ -17,7 +17,7 @@ public class Enum1 {
 		Sports sp[] = Sports.values(); //returns a list of enumeration constant
 		
 		for(Sports s : sp) {
-			System.out.println("Sports Value: "+s);
+			System.out.println("Sports Value: "+s+" It's position: "+s.ordinal()); //it is returns position value
 		}
 	}
 
