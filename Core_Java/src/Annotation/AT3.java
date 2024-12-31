@@ -47,7 +47,6 @@ class Annot1{
 }
 
 public class AT3 {
-
 	public static void main(String[] args) {
 		Annot1 ob = new Annot1();
 		ob.show1();
