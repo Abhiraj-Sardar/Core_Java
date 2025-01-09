@@ -14,7 +14,7 @@ class D extends C{
 }
 
 final class E{ //class declared as final cannot be extended
-	
+
 }
 
 class F extends E{ //error
