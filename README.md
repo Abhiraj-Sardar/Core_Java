@@ -14,8 +14,17 @@
 
 # DSA 
 
+- Matrix
+   - Orthogonal Matrix
+   - Triangular Matrix
 - Sparse Matrix
 - Polynomial
 - Searching
    - Linear Search
    - Binary Search
+- Sorting 
+   - Bubble Sort
+   - Insertion Sort
+   - Selection Sort
+- Stack
+   - Valid Parenthesis
