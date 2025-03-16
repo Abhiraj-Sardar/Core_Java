@@ -16,3 +16,6 @@
 
 - Sparse Matrix
 - Polynomial
+- Searching
+   - Linear Search
+   - Binary Search
