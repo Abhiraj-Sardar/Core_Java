@@ -8,6 +8,9 @@ public class StackPrg {
 		System.out.println(ValidParenthesis.checkValidParenthesis("({}[])",st));
 		Postfix.eval("9 3 4 * 8 + 4 / -");
 		Postfix.convert("9 - ( ( 3 * 4 ) + 8 ) / 4");
+		Prefix.eval("- 9 / + * 3 4 8 4");
+		Prefix.convert("9 - ( ( 3 * 4 ) + 8 ) / 4");
+		
 	}
 
 }

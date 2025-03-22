@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 class Postfix{
 	
-	static Map<String,Integer> priority = new HashMap<String,Integer>();
+static Map<String,Integer> priority = new HashMap<String,Integer>();
 	
 public static void convert(String s) {
 	
@@ -59,10 +59,10 @@ public static void convert(String s) {
 			}
 		}
 		
-		System.out.println(ans);
+		System.out.println("Postfix Conversion is: "+ans);
 }
+
 	public static void eval(String e) {
-//		String exp="934*8+4/-";
 		
 		StringTokenizer exp = new StringTokenizer(e," ");
 		int n = exp.countTokens();		
@@ -106,7 +106,7 @@ public static void convert(String s) {
 			}
 		}
 		
-		System.out.println(st.pop());
+		System.out.println("Postfix Evaluation is: "+st.pop());
 	}
 	
 

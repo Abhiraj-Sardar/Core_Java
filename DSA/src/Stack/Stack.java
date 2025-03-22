@@ -1,5 +1,10 @@
 package Stack;
 
+class StackException extends Exception{
+	public String toString() {
+		return "Stack Class Exception";
+	}
+}
 public class Stack<T> {
 	
 	private int top=-1;
@@ -25,34 +30,37 @@ public class Stack<T> {
 	public void push(T val) {
 		try {
 			if(isOverFlow()) {
-				throw new ArrayIndexOutOfBoundsException();
+				throw new StackException();
 			}else {
 				top++;
 				arr[top]=val;
 			}
-		}catch(Exception e) {
+		}catch(StackException e) {
 			System.out.println("OverFlow...Stack is Full...!!!");
 			System.exit(0);
-		}
-		
+		}	
 	}
 	
 	public T pop() {
 		T y=null;
 		try {
 			if(isUnderFlow()) {
-				throw new ArrayIndexOutOfBoundsException();
+				throw new StackException();
 			}else {
 				y=arr[top];
 				top--;
 //				System.out.println("Popped Item is : "+y);
 			}
-		}catch(Exception e) {
+		}catch(StackException e) {
 			System.out.println("UnderFlow...Stack is Empty...!!!");
 			System.exit(0);
 		}
 		
 		return y;
+	}
+	
+	public int getTopPos() {
+		return top;
 	}
 	
 	public T peek() {
