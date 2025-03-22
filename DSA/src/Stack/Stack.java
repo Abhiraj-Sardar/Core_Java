@@ -32,6 +32,7 @@ public class Stack<T> {
 			}
 		}catch(Exception e) {
 			System.out.println("OverFlow...Stack is Full...!!!");
+			System.exit(0);
 		}
 		
 	}
@@ -48,6 +49,7 @@ public class Stack<T> {
 			}
 		}catch(Exception e) {
 			System.out.println("UnderFlow...Stack is Empty...!!!");
+			System.exit(0);
 		}
 		
 		return y;

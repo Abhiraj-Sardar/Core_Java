@@ -25,6 +25,7 @@ public class HashMapPrgm {
 		if(hm.containsKey("id")) {
 			System.out.println("id available");
 		}
+		System.out.println(hm.get("day"));
 	}
 
 }
