@@ -10,7 +10,6 @@ class Node<T>{
 		this.data=data;
 	}
 }
-
 class SingleLinkedList<T>{
 	Node<T> head;
 		
@@ -194,46 +193,44 @@ class SingleLinkedList<T>{
 		}
 	}
 	
-	//this portion need to be done
 	public Node<T> delete_specified_element(Node<T> head,T element){
-		int flag=0;
-		Node<T> ptr=head;
-		Node<T> temp=ptr;
-		if(ptr==null) {
-			System.out.println("Linked List is empty...");
+		Node<T> temp=head;
+		Node<T> ptr=head.next;
+		if(head==null) {
+			System.out.println("Linked List is Empty...");
 		}
-		else if(ptr.data.equals(element)) {
-			ptr=ptr.next;
-			temp=null;
-			return ptr;
-		}
-		else {	
-				ptr=ptr.next;
-				while(ptr.next!=null) {
-					if(ptr.data.equals(element)) {
-						temp.next=ptr.next.next;
-						flag=1;
-						break;
-					}
-					ptr=ptr.next;
-					temp=temp.next;
+		else if(temp.data.equals(element)){
+			temp=temp.next;
+			return temp;
+		}else {
+				while(ptr!=null) {
+				if(ptr.data.equals(element)) {
+					temp.next=ptr.next;
+					break;
 				}
+				temp=temp.next;
+				ptr=ptr.next;
+			}
 		}
 		
-		if(flag==1) {
-			System.out.println("Element Deleted...");
-		}else {
-			System.out.println("Element not exist...");
-		}
+		
 		return head;
 	}
 	
-	public Node<T> reverse(Node<T> ptr){
+	public Node<T> reverse(Node<T> root){
 		
+		Node<T> temp=root;
+		Node<T> curr=temp.next;
+		Node<T> ptr=null;
 		
-		
-		
-		return ptr;
+		while(curr!=null) {
+			temp.next=ptr;
+			ptr=temp;
+			temp=curr;
+			curr=curr.next;
+		}
+		temp.next=ptr;
+		return temp;
 	}
 	
 	public void linearSearch(Node<T> ptr, T val) {
@@ -265,10 +262,14 @@ public class LinkedListPrgm {
 		sll.display(head);
 		sll.linearSearch(head, 10);
 		sll.insert_after_element(head,0, 12);
-		sll.display(head);
+		
 		head=sll.delete_at_begin(head);
-//		head=sll.delete_specified_element(head, 10);
+		sll.display(head);
+		head=sll.delete_specified_element(head, 5);
+		sll.display(head);
+		head=sll.reverse(head);
 		sll.display(head);
 		
 	}
 }
+
